@@ -11,6 +11,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 app.use(express.static('./public'));
+const PORT = process.env.PORT || 3000;
+
 
 let todoList = [
   {
@@ -39,10 +41,6 @@ app.get('/todo', (req, res) => {
         taskItems: todoList, 
     });
 });
-
-
-
-
 
 
 // GET /api/todos
@@ -138,6 +136,6 @@ app.delete('/api/todos/:id', (req, res) => {
     }                            
 })
 
-//   app.listen(8000, function () {
-//   console.log('Todo List API is now listening on port 8000...');
-// });
+  app.listen(PORT, function () {
+  console.log(`Todo List API is now listening on port ${PORT}...`);
+});
