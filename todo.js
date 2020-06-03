@@ -16,19 +16,19 @@ let todoList = [
   {
     id: 1,
     todo: 'Implement a REST API',
-    details: 'Learn some JS and get coding!'
+    // details: 'Learn some JS and get coding!'
   },
 
   {
     id: 2,
     todo: 'Market',
-    details: 'Website! Advertising! Write a jingle!'
+    // details: 'Website! Advertising! Write a jingle!'
   },
 
   {
     id: 3,
     todo: 'Make money',
-    details: 'This is a new concept, but you will like it.'
+    // details: 'This is a new concept, but you will like it.'
   },
 ];
 
@@ -52,7 +52,7 @@ app.get('/todo', (req, res) => {
 // app.get('/api/todos', todoApi);
 
 //OR:
-app.get('/api/todos', (req, res) => {
+app.get('/api/todo', (req, res) => {
   res.json(todoList)
 })
 
@@ -134,9 +134,8 @@ app.delete('/api/todos/:id', (req, res) => {
     if(req.query.form) {
         res.redirect('/todo');
     } else {
-        res.json(todo);
-    }
-  res.send('Deleted item')                              //what is send back to user, must have a res
+        res.json(todo);                                 //what is send back to user, must have a res
+    }                            
 })
 
   app.listen(8000, function () {
