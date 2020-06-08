@@ -2,15 +2,6 @@
 <h2 class="title"><%= title %></h2>
 <!--<button type="button" value="click" class="first-add">Add task</button>-->
     <div class="outer-div">
-        <!-- <form>
-            <div class="form-row">
-                <div class="col" id="format-form2">
-                    <input type="text" class="form-control" id="description" name="item" placeholder="DetailSpace"
-                        required>
-                    <input type="submit" value="Add">
-                </div>
-            </div>
-        </form> -->
             <form action="/api/todos?form=true" method="POST">
             <div class="col top-form" id="format-form2">
                     <input type="text" class="form-control top-input" id="todo" name="todo" placeholder="Enter a Task" style="color: #9d95e2; border-radius: 0;"/>
