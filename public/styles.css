@@ -1,7 +1,5 @@
-
 body {
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background-image: url('./images/greyspace.jpg');
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
 }
@@ -12,38 +10,44 @@ body {
 }
 
 .outer-div {
-    border: 4px solid #9d95e2;
+    border: 1px solid #f81404;
+    width: 40%;
 
 }
 
 .title {
-    color: #9d95e2;
-    border-bottom: 2px solid #9d95e2;
+    color: #f81404;
+    border-bottom:  1px solid #f81404;
     margin-left: 5px;
 }
 
-.top-form {
-    width: 100%;
-    margin-top: 5px;
+#format-form1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2%;
+    width: 92%;
 }
 
 .top-input {
-    width: 100%;
-    border: 2px solid #9d95e2;
+    width: 80%;
+    border: 1px solid #f81404;
 }
 
 .top-button {
     width: 20%;
 }
 
+
 #format-form2 {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
 
 input[type=text]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #9d95e2;
+    color: #f81404;
 }
 
 input:-webkit-autofill,
@@ -55,20 +59,20 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-    color: #9d95e2;
+    color: #f81404;
 }
 
 input[type=text] {
-    -webkit-text-fill-color: #9d95e2 !important;
+    -webkit-text-fill-color: #f81404 !important;
     font-size: 70%;
     padding-left: 2%;
-    border: 2px solid #9d95e2;
+    border: 1px solid #f81404;
 }
 
 #submit {
-    background-color: #9d95e2;;
-    border: 1px solid #fdbb2d;
-    color: white;
+    background-color: white;
+    border: 1px solid #f81404;
+    color: #f81404;
 }
 
 #edit {
@@ -88,19 +92,19 @@ input[type=text] {
 }
 
 .task-item {
-    color: #9d95e2;
+    color: #f81404;
     font-weight: bold;
-    margin-top: 25px;
+    margin-top: 5px;
 }
 
 .button-div1 {
-    border-top: 1px solid #9d95e2;
-    border-bottom: 1px solid #9d95e2;
+    border-top: 1px solid #f81404;
+    border-bottom: 1px solid #f81404;
 }
 
 @media only screen and (min-width: 320px) {
     .outer-div {
-        margin-left: 30px;
+        margin-left: 5px;
         width: 90%;
     }
 
@@ -117,7 +121,73 @@ input[type=text] {
         padding-top: 11px;
         padding-bottom: 11px;
     }
+
+    #format-form1 {
+        width: 98.2%;
+    }
+
+    .top-input {
+        width: 68%;
+    }
     
+    .top-button {
+        width: 32%;
+    }
+    
+}
+
+@media only screen and (min-width: 360px) {
+    #format-form1 {
+        width: 96.5%;
+    }
+
+    .top-input {
+        width: 71%;
+    }
+    
+    .top-button {
+        width: 29%;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    #format-form1 {
+        width: 95.5%;
+    }
+
+    .top-input {
+        width: 72.5%;
+    }
+    
+    .top-button {
+        width: 27.5%;
+    }
+}    
+
+@media only screen and (min-width: 411px) {
+    #format-form1 {
+        width: 94%;
+    }
+
+    .top-input {
+        width: 75%;
+    }
+    
+    .top-button {
+        width: 25%;
+    }
+
+    #format-form1 {
+        width: 96%;
+    }
+
+    .top-input {
+        width: 72%;
+    }
+    
+    .top-button {
+        width: 28%;
+    }
 }
 
 @media only screen and (min-width: 414px) {
@@ -160,6 +230,32 @@ input[type=text] {
         padding-top: 11px;
         padding-bottom: 11px;
     }
+
+    #format-form1 {
+        width: 94.5%;
+    }
+
+    .top-input {
+        width: 74.5%;
+    }
+    
+    .top-button {
+        width: 25.5%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #format-form1 {
+        width: 91%;
+    }
+
+    .top-input {
+        width: 80.5%;
+    }
+    
+    .top-button {
+        width: 19.5%;
+    }
 }
 
 @media only screen and (min-width: 1184px) {
@@ -182,71 +278,3 @@ input[type=text] {
         padding-bottom: 11px;
     }
 }
-
-/* Style the button that is used to open and close the collapsible content */
-/* .collapsible {
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-} */
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-/* .active, 
-.collapsible:hover {
-    background-image: url('/images/button-hover.jpg');
-    color: white;
-} */
-
-/* Style the collapsible content. Note: hidden by default */
-/* #content {
-    padding: 0 12px;
-    display: none;
-    overflow: hidden;
-    background-color: #6c679d;
-    opacity: .8;
-    color: white;
-    
-} */
-
-/* .button-div2 {
-    border-bottom: 1px solid #9d95e2;
-}
-
-.complete {
-    border-bottom: 1px solid #9d95e2;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-}
-
-.complete:hover {
-    background-image: url('/images/button-hover.jpg');
-    color: white;
-}
-
-.delete {
-    border-top: 1px solid #9d95e2;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-}
-
-.delete:hover {
-    background-image: url('/images/button-hover.jpg');
-    color: white;
-} */
